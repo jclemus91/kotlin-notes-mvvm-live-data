@@ -1,2 +1,3 @@
-# kotlin-notes-mvvm-live-data
-demo
+# Notes
+A new Notes application for company training
+
