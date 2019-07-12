@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/nav_graph"
+            app:startDestination="@id/notesFragment">
+
+    <fragment android:id="@+id/notesFragment" android:name="com.training.notes.ui.list.NotesFragment"
+              android:label="notes_fragment" tools:layout="@layout/notes_fragment">
+        <action android:id="@+id/action_notesFragment_to_addNoteFragment" app:destination="@id/addNoteFragment"/>
+        <action android:id="@+id/action_notesFragment_to_noteDetailFragment" app:destination="@id/noteDetailFragment"/>
+    </fragment>
+    <fragment android:id="@+id/addNoteFragment" android:name="com.training.notes.ui.add.AddNoteFragment"
+              android:label="add_note_fragment" tools:layout="@layout/add_note_fragment"/>
+    <fragment android:id="@+id/noteDetailFragment" android:name="com.training.notes.ui.detail.NoteDetailFragment"
+              android:label="note_detail_fragment" tools:layout="@layout/note_detail_fragment"/>
+</navigation>
