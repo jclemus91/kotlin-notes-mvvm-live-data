@@ -5,32 +5,27 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.training.notes.R
+import kotlinx.android.synthetic.main.add_note_fragment.*
 import org.koin.android.viewmodel.ext.android.viewModel
 
 class AddNoteFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = AddNoteFragment()
-    }
-
     private val viewModel: AddNoteViewModel by viewModel()
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.add_note_fragment, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel.addNote("title", "message")
+        buttonSave.setOnClickListener {
+            viewModel.addNote(
+                etTitle.text.toString(),
+                etDescription.text.toString()
+            )
+            findNavController().popBackStack()
+        }
     }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-
-    }
-
 }

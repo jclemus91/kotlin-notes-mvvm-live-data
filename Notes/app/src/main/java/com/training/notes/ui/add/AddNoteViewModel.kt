@@ -11,5 +11,4 @@ class AddNoteViewModel(
     fun addNote(title: String, message: String) {
         notesRepository.addNote(Note(title, message))
     }
-
 }
