@@ -1,0 +1,34 @@
+Proyecto:
+    
+Why kotlin?
+    -
+Why DI
+    -
+
+Android Structure
+    -Activity
+    -Fragment
+    -VM
+        -LiveData
+        -Repository
+        -DAO
+    
+1er hora 
+    Vista Simple con Texto al centro
+    DI
+    MVVM
+    LiveData
+    Dao
+    Repository
+2da hora
+    Crear Add note Fragment
+    Pasar datos al VM y guardar nota
+3era hora
+    Agregar pop a AddNote en el boton save
+    Crear Notes Fragment
+    Crear NotesVM
+4ta hora
+    Crear Detalle
+    Abrir detalle
+5ta hora
+    Testing
