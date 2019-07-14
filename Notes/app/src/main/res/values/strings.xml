@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Notes</string>
+
+    <string name="add_note_title">Add Note</string>
+    <string name="add_note_title_hint">Title</string>
+    <string name="add_note_description_hint">Description</string>
+    <string name="add_note_save">Save</string>
+
+    <string name="notes_title">Notes</string>
+    <string name="notes_add_note_action">Add</string>
+    <string name="notes_empty_list">Please add a new note :)</string>
+
+    <string name="note_detail_title">Note Detail</string>
+    <string name="note_detail_title_label">Title</string>
+    <string name="note_detail_description_label">Description</string>
+
+</resources>
