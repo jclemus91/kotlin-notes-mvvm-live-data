@@ -20,8 +20,8 @@
             android:text="@string/notes_empty_list"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/tvEmpty" app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
-            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp" app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
+            android:id="@+id/tvEmpty" app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="@dimen/spacing_sm"
+            android:layout_marginStart="@dimen/spacing_sm" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="@dimen/spacing_sm"
+            android:layout_marginRight="@dimen/spacing_sm" app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="@dimen/spacing_sm"
             app:layout_constraintBottom_toBottomOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

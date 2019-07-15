@@ -4,6 +4,7 @@
     <string name="add_note_title">Add Note</string>
     <string name="add_note_title_hint">Title</string>
     <string name="add_note_description_hint">Description</string>
+    <string name="add_note_cancel">Cancel</string>
     <string name="add_note_save">Save</string>
 
     <string name="notes_title">Notes</string>

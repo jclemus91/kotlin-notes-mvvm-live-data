@@ -1,43 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".ui.add.AddNoteFragment">
-    <EditText
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:ems="10"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.add.AddNoteFragment"
+    >
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/titleInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_sm"
+        android:layout_marginLeft="@dimen/spacing_sm"
+        android:layout_marginTop="@dimen/spacing_md"
+        android:layout_marginEnd="@dimen/spacing_sm"
+        android:layout_marginRight="@dimen/spacing_sm"
+        android:hint="@string/add_note_title_hint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etTitle"
-            android:layout_marginTop="32dp"
-            android:hint="@string/add_note_title_hint"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginStart="16dp"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="16dp" android:layout_marginEnd="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginRight="16dp"/>
-    <EditText
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName"
             android:ems="10"
-            android:hint="@string/add_note_description_hint"
+            android:inputType="textPersonName"
+            android:singleLine="true"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/messageInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_md"
+        android:hint="@string/add_note_description_hint"
+        app:layout_constraintEnd_toEndOf="@+id/titleInput"
+        app:layout_constraintStart_toStartOf="@+id/titleInput"
+        app:layout_constraintTop_toBottomOf="@+id/titleInput"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etDescription"
-            app:layout_constraintEnd_toEndOf="@+id/etTitle"
-            app:layout_constraintStart_toStartOf="@+id/etTitle"
-            app:layout_constraintTop_toBottomOf="@+id/etTitle"
-            android:layout_marginTop="24dp"/>
-    <Button
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/buttonSave"
-            android:text="@string/add_note_save"
-            app:layout_constraintEnd_toEndOf="@+id/etDescription"
-            app:layout_constraintStart_toStartOf="@+id/etDescription"
-            app:layout_constraintTop_toBottomOf="@+id/etDescription"
-            android:layout_marginTop="24dp"/>
+            android:ems="10"
+            android:inputType="textImeMultiLine"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/buttonCancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_lg"
+        android:text="@string/add_note_cancel"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toStartOf="@+id/buttonSave"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/messageInput"
+        app:layout_constraintTop_toBottomOf="@id/messageInput"
+        />
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_lg"
+        android:text="@string/add_note_save"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonCancel"
+        app:layout_constraintTop_toBottomOf="@id/messageInput"
+        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,14 +9,14 @@
             android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="16dp" android:layout_marginRight="16dp"
+            android:layout_marginEnd="@dimen/spacing_md" android:layout_marginRight="@dimen/spacing_md"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="16dp" android:layout_marginStart="16dp"
+            android:layout_marginLeft="@dimen/spacing_md" android:layout_marginStart="@dimen/spacing_md"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="16dp">
+            android:layout_marginBottom="@dimen/spacing_md">
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/tvTitle" android:layout_margin="16dp"/>
+                android:id="@+id/tvTitle" android:layout_margin="@dimen/spacing_md"/>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
