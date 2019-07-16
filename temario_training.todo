@@ -13,6 +13,72 @@ Android Structure
         -Repository
         -DAO
     
+CLASES
+Class
+PROPIEDADEs
+var, val
+FUNCIONEs
+fun aFunction()
+HERENCIA
+open class Vehicle(val name) { //permite instanciarse y open para heredar
+    open fun something() : String {}
+}
+class Moto(val name) : Vehicle(name) {
+    override fun something() : String { "algo"}
+}
+class Bus(val name) : Vehicle(name) {
+    override fun something() : String { "algo"}
+}
+ABSTRACT CLASS
+abstract class Vehicle(val name) { //No permite instanciarse
+    open fun something() : String {}
+}
+class Moto(val name) : Vehicle(name) {
+    override fun something() : String { "algo"}
+}
+class Bus(val name) : Vehicle(name) {
+    override fun something() : String { "algo"}
+}
+INTERFACES
+interface Name {
+    fun algo()
+}
+OBJECT
+Es un singleton, solo puede ser accedida en private o localmente
+object Electriv : Name {
+    override fun algo() {}
+}
+Electriv.algo()
+COMPANION OBJECT
+Staticos, No pueden ser accedidos desde la instancia, sino directamente y pueden tener un nombre
+class Car {
+    companion object Factory {
+        fun newInstance() {}
+    }
+}
+val factory = Car.Factory
+factory.newInstance()
+
+NULL SAFE
+var aString : String? = null
+var aString2: String = null// error de compilacion
+ELVIS OPERATOR
+val result ?: nulleableVar ?: "default data"
+ANY
+Any es como el Object de Java o el 
+fun(data: Any) {
+    print(any.toString())
+}
+UNIT
+unit es como el void de java, siempre se retorna un Unit
+EQUALS
+equals(other: Any?) compara la equivalencia en lugar de la referencia
+hashCode() representacion numerica, cuando es invocado muchas veces la misma instancia
+deberia se el mismo valor, dos instancias que retornan True cuando
+son coparadas con equals, deberian tener el mismo hashCode
+COPY()
+reusa los valores de una instancia existente,  permite crear nuevas instancias
+y overridear los paramatros que queremos remplezar
 1er hora 
     Vista Simple con Texto al centro
     DI
