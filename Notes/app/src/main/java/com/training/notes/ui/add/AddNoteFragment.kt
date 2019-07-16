@@ -7,7 +7,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.training.notes.R
-import kotlinx.android.synthetic.main.add_note_fragment.*
+import kotlinx.android.synthetic.main.add_note_fragment.buttonCancel
+import kotlinx.android.synthetic.main.add_note_fragment.buttonSave
+import kotlinx.android.synthetic.main.add_note_fragment.etDescription
+import kotlinx.android.synthetic.main.add_note_fragment.etTitle
 import org.koin.android.viewmodel.ext.android.viewModel
 
 class AddNoteFragment : Fragment() {
@@ -25,6 +28,9 @@ class AddNoteFragment : Fragment() {
                 etTitle.text.toString(),
                 etDescription.text.toString()
             )
+            findNavController().popBackStack()
+        }
+        buttonCancel.setOnClickListener {
             findNavController().popBackStack()
         }
     }
