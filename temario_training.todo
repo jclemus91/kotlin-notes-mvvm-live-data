@@ -79,6 +79,54 @@ son coparadas con equals, deberian tener el mismo hashCode
 COPY()
 reusa los valores de una instancia existente,  permite crear nuevas instancias
 y overridear los paramatros que queremos remplezar
+ENUM
+interface Exotic{
+    fun isExotic() : Boolean
+}
+enum class Flour: Exotic {
+    CASSAVA {
+        override fun isGlutenFree() : Boolean {
+            return true
+        }
+        override fun isExotic() : Boolean {
+            return true
+        }
+    }
+    abstract fun isGlutenFree() : Boolean
+}
+GENERICS Y FUNCTIONES AS PARAMETERS
+fun main() {
+    println(transform("kotlin", ::reverse))
+    println(transform("java", { reverse(it) }))
+    println(transform("java") { reverse(it) })
+    unless(false) {
+        println("si entra")
+    }
+    println(a())
+}
+
+fun <T> transform(t: T, fn: (T) -> T): T {
+    return fn(t)
+}
+
+fun reverse(string: String): String {
+    return string.reversed()
+}
+
+fun unless(condition: Boolean, block: () -> Unit) {
+    if (!condition) block.invoke()
+}
+
+fun a() :String {
+    fun b() : String {
+        fun c() : String  {
+            return "c"
+        }
+        return "b ${c()}"
+    }
+    return "a ${b()}"
+}
+
 1er hora 
     Vista Simple con Texto al centro
     DI
