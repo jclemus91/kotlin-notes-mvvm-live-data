@@ -94,7 +94,7 @@ enum class Flour: Exotic {
     }
     abstract fun isGlutenFree() : Boolean
 }
-GENERICS Y FUNCTIONES AS PARAMETERS
+GENERICS Y FUNCTIONES AS PARAMETERS (HIGH ORDER FUNCTIONS)
 fun main() {
     println(transform("kotlin", ::reverse))
     println(transform("java", { reverse(it) }))
